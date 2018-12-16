@@ -55,9 +55,9 @@ int main(int argc, char **argv) {
 
 	/*
 		Multithread all events
-		main: main() & Output (Screen) - Refreshes @ 240Hz
+		main: main() & Output (Screen) - Refreshes @ 60Hz
 		async: asynchronously take input - Refreshes @ 1,000Hz 
-		inc: passive score incrementation with own timer @ 100Hz bc people are slow but u can still use macros to cheat ;)
+		inc: passive score incrementation with own timer @ 1Hz
 	*/
 	pthread_create(&async, NULL, io, NULL);
 	pthread_create(&passiveInput, NULL, inc, NULL);
